@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes da Ocorrência | Bairro Digital</title>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="css/detalhes.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="pagInicial.html">
+        <i class="fas fa-map-marked-alt text-primary"></i> <strong>Bairro Digital</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="pagInicial.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="perfil.html">Meu Perfil</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <div id="loading" class="text-center mb-4">
+      <div class="spinner-border text-primary" role="status"></div>
+      <p class="mt-2 text-muted">Carregando detalhes da ocorrência...</p>
+    </div>
+
+    <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
+
+    <!-- Card -->
+    <div class="card shadow-sm p-4">
+      
+      <header class="mb-4">
+        <h1 id="occurrenceTitle" class="h3 font-weight-bold text-center">Título da Ocorrência</h1>
+        <p class="lead text-muted text-center">Acompanhe os detalhes desta ocorrência reportada.</p>
+        <img id="occurrenceImage" src="https://via.placeholder.com/800x400" alt="Imagem da ocorrência" />
+      </header>
+
+      <!-- Detalhes -->
+      <section class="text-left text-md-left mt-4">
+        <h4 class="mb-3"><i class="fas fa-info-circle"></i> Detalhes</h4>
+        <p><strong>Descrição:</strong> <span id="occurrenceDescription">...</span></p>
+        <p><strong>Status:</strong> <span id="occurrenceStatus">...</span></p>
+        <p><strong>Tipo:</strong> <span id="occurrenceType">...</span></p>
+        <p>
+          <strong>Localização:</strong> 
+          <span id="occurrenceRegion">...</span>
+          <a id="mapLink" href="#" target="_blank" class="btn btn-sm btn-outline-success ml-2 d-none">
+            <i class="fas fa-map-marker-alt"></i> Ver no Mapa
+          </a>
+        </p>
+        <p><strong>Reportado por:</strong> <span id="occurrenceUser">...</span></p>
+        <p><strong>Data:</strong> <span id="occurrenceDate">...</span></p>
+      </section>
+
+      <!-- Botão voltar -->
+      <div class="text-center mt-4">
+        <a href="pagInicial.html" class="btn btn-outline-primary">
+          <i class="fas fa-arrow-left"></i> Voltar para Início
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/parse/dist/parse.min.js"></script>
+  <script src="js/detalhes.js"></script>
+</body>
+</html>

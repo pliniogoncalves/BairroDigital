@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="css/login.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.4.2/parse.min.js"></script>
+
+    <script src="js/login.js" defer></script>
+
+    <style>
+        body {
+            padding-top: 70px; 
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="pagInicial.html">
+            <i class="fas fa-map-marked-alt text-primary"></i> <strong>Bairro Digital</strong>
+        </a>
+        <div class="ml-auto">
+            <a href="pagInicial.html" class="btn btn-outline-secondary">
+                &#8592; Voltar à Página Inicial
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-sm">
+        <img src="img/BairroDig.png" alt="Logo do BAIRRO DIGITAL" class="system-img">
+
+        <div id="formContainer">
+            <!-- Seção de Login -->
+            <div id="loginSection">
+                <h3>Login</h3>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-lg" id="loginEmail" placeholder="E-mail" required autocomplete="off">
+                        <div id="loginEmailError" class="error-message text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control form-control-lg" id="loginPassword" placeholder="Senha" required autocomplete="off">
+                        <div id="loginPasswordError" class="error-message text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <button id="loginButton" type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+                    </div>
+                    <p>Não tem uma conta? <a href="#" id="showRegister">Cadastre-se</a></p>
+                    <p><a href="#" id="forgotPassword" data-toggle="modal" data-target="#passwordModal">Esqueci minha senha</a></p>
+                </form>
+            </div>
+
+            <!-- Seção de Cadastro -->
+            <div id="registerSection" style="display: none;">
+                <h3>Cadastro</h3>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="registerName" placeholder="Nome" required autocomplete="off">
+                        <div id="registerNameError" class="error-message text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-lg" id="registerEmail" placeholder="E-mail" required autocomplete="off">
+                        <div id="registerEmailError" class="error-message text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control form-control-lg" id="registerPassword" placeholder="Senha" required autocomplete="off">
+                        <div id="registerPasswordError" class="error-message text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <button id="registerButton" type="submit" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
+                    </div>
+                    <p>Já tem uma conta? <a href="#" id="showLogin">Login</a></p>
+                </form>
+            </div>
+
+            <div id="errorMessage" class="text-danger" style="display: none;"></div>
+            <div id="successMessage" class="text-success" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Modal Recuperação de Senha -->
+    <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="passwordModalLabel">Recuperar Senha</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Por favor, insira seu e-mail para recuperar sua senha.</p>
+                    <form id="passwordRecoveryForm">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="recoveryEmail" placeholder="Digite seu e-mail" required>
+                        </div>
+                        <div id="recoveryErrorMessage" class="error-message text-danger"></div>
+                        <div class="form-group">
+                            <button id="recoveryButton" type="submit" class="btn btn-primary">Enviar link de recuperação</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

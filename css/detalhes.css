@@ -1,0 +1,92 @@
+body {
+  background-color: #f8f9fa;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.service-header {
+  background-color: #007bff;
+  color: white;
+  padding: 30px 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-details,
+.reviews {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.reviews {
+  margin-top: 30px;
+}
+
+.review-item {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.star-rating i {
+  color: #ffc107;
+}
+
+.btn-back {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+}
+
+#loading {
+  display: none;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+#occurrenceImage {
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain; 
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+}
+
+section p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p.lead {
+    font-size: 1rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
