@@ -1,4 +1,4 @@
-// Inicialização do Parse
+ // Inicialização do Parse
 Parse.initialize("Kh8rJMBCG43Lq5cpwJVGNpM4w09HELTfcskylROh", "Dcw2WhPSyOZKLfmBIEZUHZbmbhM8ObCDlnCh3Dhr");
 Parse.serverURL = "https://parseapi.back4app.com/";
 
