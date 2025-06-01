@@ -1,19 +1,44 @@
- body {
+body {
     font-family: Arial, sans-serif;
   }
   
-  .system-text {
+ .system-text {
     text-align: center;
     color: #007bff;
   }
-  
-  .navbar-brand {
+  /*Configuração do Navbar*/
+ .navbar-brand {
     font-weight: bold;
     color: #007bff;
   }
-  
+
+ .bg-light {
+    background-color: #007bff !important;
+}
+
+.navbar-light .navbar-brand {
+    color: rgb(255 255 255 / 90%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-primary {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-primary {
+    color: #ffffff;
+    border-color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+  .btn-outline-primary:hover {
+    background-color: #ffffff;
+    color: #007bff;
+  }
+
   .nav-link i {
     vertical-align: middle;
+    margin-right: 5px;
   }
   
   #serviceList .card {
@@ -63,8 +88,12 @@
   #searchButton {
     background-color: #007bff;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
   }
-  
+
  
   #error-message {
     margin-top: 15px;

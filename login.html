@@ -28,6 +28,18 @@
     </style>
 </head>
 <body>
+
+    <!-- Vídeo de fundo -->
+<div class="bg-video-container">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="video/cidade.mp4" type="video/mp4">
+    <source src="video/cidade.webm" type="video/webm">
+    Seu navegador não suporta vídeo.
+  </video>
+  <div class="overlay"></div>
+</div>
+  
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="pagInicial.html">
@@ -39,12 +51,10 @@
             </a>
         </div>
     </nav>
-
     
     <div class="container-sm">
         <img src="img/BairroDig.png" alt="Logo do BAIRRO DIGITAL" class="system-img">
 
-       
         <div id="formContainer">
             <!-- Login -->
             <div id="loginSection">
