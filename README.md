@@ -106,7 +106,7 @@ Para cada microsserviço (`auth-service` e `occurrences-service`), siga os passo
 
 1.  **Clone o repositório (se ainda não o fez):**
     ```bash
-    git clone [URL_DO_SEU_REPOSITORIO_NO_GITHUB]
+    git clone https://github.com/pliniogoncalves/BairroDigital
     cd BairroDigital 
     ```
 
@@ -158,7 +158,7 @@ Para cada microsserviço (`auth-service` e `occurrences-service`), siga os passo
 
 ## ☁️ Hospedagem (Deploy)
 
-* **Frontend:** Pode ser deployado no Vercel. Atualize as URLs da API no código JS.
+* **Frontend:** Vercel. Atualize as URLs da API no código JS.
 * **Backend:**
     * Pode ser hospedado em Render, Fly.io, Heroku, AWS, GCP, etc.
     * **Upload de imagens:** Atualmente, as imagens são salvas localmente. Para produção, use armazenamento em nuvem (ex: AWS S3, Cloudinary).
@@ -176,4 +176,4 @@ A aplicação será apresentada à comunidade conforme os requisitos da discipli
 ---
 
 ## 👨‍💻 Contato
-Para dúvidas, sugestões ou contribuições, por favor, abra uma *issue* neste repositório GitHub ou entre em contato com [Seu Nome/Email ou Nome da Equipe].
+Para dúvidas, sugestões ou contribuições, por favor, abra uma *issue* neste repositório GitHub ou entre em contato com [Plinio Gonçalves/pliniogoncalves@edu.unifor.br].
