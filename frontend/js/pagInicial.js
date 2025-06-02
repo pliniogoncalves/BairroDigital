@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadOccurrences();
 });
 
-const API_OCCURRENCES_URL = 'http://localhost:3002/occurrences';
+//const API_OCCURRENCES_URL = 'http://localhost:3002/occurrences';
+const API_OCCURRENCES_URL = 'https://bairro-digital-occurrences.onrender.com/occurrences';
 
 function configurarVisibilidadeNavbar(user, btnEntrar, navPerfil, btnPublicar, btnSair, navUserInfo, loggedInUserNameSpan) {
     const isLoggedIn = !!user && !!localStorage.getItem('authToken');
@@ -76,7 +77,8 @@ function configurarVisibilidadeNavbar(user, btnEntrar, navPerfil, btnPublicar, b
     }
 }
 
-const OCCURRENCES_SERVICE_BASE_URL = 'http://localhost:3002';
+//const OCCURRENCES_SERVICE_BASE_URL = 'http://localhost:3002';
+const OCCURRENCES_SERVICE_BASE_URL = 'https://bairro-digital-occurrences.onrender.com';
 
 async function loadOccurrences() {
     const serviceList = document.getElementById("serviceList");

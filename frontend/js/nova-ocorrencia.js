@@ -1,4 +1,5 @@
-const API_OCCURRENCES_URL = 'http://localhost:3002/occurrences';
+//const API_OCCURRENCES_URL = 'http://localhost:3002/occurrences';
+const API_OCCURRENCES_URL = 'https://bairro-digital-occurrences.onrender.com/occurrences';
 
 document.addEventListener("DOMContentLoaded", () => {
     const authToken = localStorage.getItem('authToken');

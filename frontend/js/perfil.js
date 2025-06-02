@@ -1,4 +1,5 @@
-const API_AUTH_URL = 'http://localhost:3001/auth';
+//const API_AUTH_URL = 'http://localhost:3001/auth';
+const API_AUTH_URL = 'https://bairro-digital-auth.onrender.com/auth';
 
 document.addEventListener("DOMContentLoaded", () => {
     const authToken = localStorage.getItem('authToken');

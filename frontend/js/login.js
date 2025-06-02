@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMessageDiv = document.getElementById('errorMessage');
     const successMessageDiv = document.getElementById('successMessage');
 
-    const API_BASE_URL = 'http://localhost:3001/auth';
+    //const API_BASE_URL = 'http://localhost:3001/auth';
+    const API_BASE_URL = 'https://bairro-digital-auth.onrender.com';
 
     if (showRegisterLink) {
         showRegisterLink.addEventListener('click', (e) => {
