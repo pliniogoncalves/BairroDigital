@@ -106,7 +106,7 @@ Para cada microsserviço (`auth-service` e `occurrences-service`), siga os passo
 
 1.  **Clone o repositório (se ainda não o fez):**
     ```bash
-    git clone https://github.com/pliniogoncalves/BairroDigital
+    git clone [https://github.com/pliniogoncalves/BairroDigital](https://github.com/pliniogoncalves/BairroDigital.git)
     cd BairroDigital 
     ```
 
