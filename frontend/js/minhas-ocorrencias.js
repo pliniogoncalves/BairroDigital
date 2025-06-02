@@ -164,9 +164,14 @@ async function abrirModalEdicao(idOcorrencia) {
         document.getElementById('editOccurrenceReferenciaModal').value = ocorrencia.referencia || '';
         
         const imgPreview = document.getElementById('currentOccurrenceImagePreview');
-        if (ocorrencia.fotoUrl && ocorrencia.fotoUrl.trim() !== '') {
-            imgPreview.src = ocorrencia.fotoUrl.startsWith('http') ? ocorrencia.fotoUrl : `${OCCURRENCES_SERVICE_BASE_URL}/${ocorrencia.fotoUrl}`;
+        if (ocorrencia.fotoFileId) {
+            imgPreview.src = `${OCCURRENCES_SERVICE_BASE_URL}/occurrences/image/${ocorrencia.fotoFileId}`;
             imgPreview.style.display = 'block';
+            imgPreview.alt = `Foto atual da ocorrência: ${ocorrencia.titulo || 'Ocorrência'}`;
+        } else if (ocorrencia.fotoUrl && ocorrencia.fotoUrl.startsWith('http')) {
+            imgPreview.src = ocorrencia.fotoUrl;
+            imgPreview.style.display = 'block';
+            imgPreview.alt = `Foto atual da ocorrência: ${ocorrencia.titulo || 'Ocorrência'}`;
         } else {
             imgPreview.src = 'img/sem-imagem.jpg';
             imgPreview.alt = 'Nenhuma foto atual';

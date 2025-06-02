@@ -124,12 +124,10 @@ function criarCardOcorrencia(ocorrencia) {
     const data = new Date(ocorrencia.createdAt).toLocaleDateString("pt-BR", { day: '2-digit', month: '2-digit', year: 'numeric' });
     
     let imagemSrc = "img/sem-imagem.jpg";
-    if (ocorrencia.fotoUrl) {
-        if (ocorrencia.fotoUrl.startsWith('http')) {
-            imagemSrc = ocorrencia.fotoUrl;
-        } else {
-            imagemSrc = `${OCCURRENCES_SERVICE_BASE_URL}/${ocorrencia.fotoUrl}`;
-        }
+    if (ocorrencia.fotoFileId) {
+        imagemSrc = `${OCCURRENCES_SERVICE_BASE_URL}/occurrences/image/${ocorrencia.fotoFileId}`;
+    } else if (ocorrencia.fotoUrl && ocorrencia.fotoUrl.startsWith('http')) {
+        imagemSrc = ocorrencia.fotoUrl;
     }
 
     const nomeUsuario = ocorrencia.userName || "Usuário Anônimo";

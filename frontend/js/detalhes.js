@@ -86,9 +86,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById("occurrenceDate").textContent = formatDate(ocorrencia.createdAt);
         
         const occurrenceImage = document.getElementById("occurrenceImage");
-        if (ocorrencia.fotoUrl) {
-            let imagemSrc = ocorrencia.fotoUrl.startsWith('http') ? ocorrencia.fotoUrl : `${OCCURRENCES_SERVICE_BASE_URL}/${ocorrencia.fotoUrl}`;
-            occurrenceImage.src = imagemSrc;
+        if (ocorrencia.fotoFileId) {
+            occurrenceImage.src = `${OCCURRENCES_SERVICE_BASE_URL}/occurrences/image/${ocorrencia.fotoFileId}`;
+            occurrenceImage.alt = `Foto da ocorrência: ${ocorrencia.titulo}`;
+        } else if (ocorrencia.fotoUrl && ocorrencia.fotoUrl.startsWith('http')) { 
+            occurrenceImage.src = ocorrencia.fotoUrl;
             occurrenceImage.alt = `Foto da ocorrência: ${ocorrencia.titulo}`;
         } else {
             occurrenceImage.src = "img/sem-imagem.jpg";
