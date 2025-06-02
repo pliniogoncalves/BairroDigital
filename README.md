@@ -139,12 +139,17 @@ Para cada microsserviço (`auth-service` e `occurrences-service`), siga os passo
 
 ### 🌐 Configuração e Uso do Frontend
 
-1. A pasta `frontend/` contém os arquivos da interface do usuário.
-2. Para rodar o frontend:
-    * **Opção 1:** Abrir `frontend/login.html` no navegador.
-    * **Opção 2 (Recomendada):** Usar "Live Server" no VSCode.
+1.  A pasta `frontend/` contém os arquivos da interface do usuário (HTML, CSS, JS).
+2.  Para rodar o frontend localmente:
+    * **Opção 1:** Abrir o arquivo `frontend/login.html` diretamente no seu navegador.
+    * **Opção 2 (Recomendada para desenvolvimento):** Utilizar uma extensão como "Live Server" no Visual Studio Code, que recarrega automaticamente a página ao salvar alterações.
 
-3. **Importante:** O JS do frontend faz requisições para `http://localhost:3001` e `http://localhost:3002`, então os serviços devem estar rodando.
+3.  **Conexão com o Backend:**
+    * **Localmente:** Por padrão, os arquivos JavaScript do frontend (`pagInicial.js`, `login.js`, etc.) estão configurados para fazer requisições aos serviços de backend rodando localmente (`http://localhost:3001` para autenticação e `http://localhost:3002` para ocorrências). Certifique-se de que ambos os serviços de backend estejam em execução.
+    * **Produção (Render/Vercel):** As URLs nos arquivos JavaScript do frontend foram ajustadas para apontar para os serviços hospedados:
+        * Serviço de Autenticação: `https://bairro-digital-auth.onrender.com/auth`
+        * Serviço de Ocorrências: `https://bairro-digital-occurrences.onrender.com/occurrences`
+        Se precisar alterar essas URLs, modifique as constantes `API_BASE_URL` (ou `API_AUTH_URL`) e `API_OCCURRENCES_URL` (ou `OCCURRENCES_SERVICE_BASE_URL`) nos respectivos arquivos `.js`.
 
 ---
 
@@ -158,10 +163,14 @@ Para cada microsserviço (`auth-service` e `occurrences-service`), siga os passo
 
 ## ☁️ Hospedagem (Deploy)
 
-* **Frontend:** Vercel. Atualize as URLs da API no código JS.
-* **Backend:**
-    * Pode ser hospedado em Render, Fly.io, Heroku, AWS, GCP, etc.
-    * **Upload de imagens:** Atualmente, as imagens são salvas localmente. Para produção, use armazenamento em nuvem (ex: AWS S3, Cloudinary).
+* **Frontend:**
+    * Hospedado na Vercel.
+    * As URLs da API nos arquivos JavaScript já foram atualizadas para apontar para os serviços de backend no Render (ver seção anterior).
+    * O arquivo `vercel.json` está configurado para reescrever a rota raiz (`/`) para `login.html`.
+
+* **Backend (Microsserviços):**
+    * Os serviços de Autenticação e Ocorrências estão hospedados no Render.
+    * **Upload de imagens:** O `occurrences-service` foi atualizado para usar **GridFS** com o MongoDB Atlas para armazenamento de imagens, eliminando a necessidade de armazenamento em disco local no servidor de produção ou soluções de terceiros como AWS S3 para este escopo. As imagens são servidas através da rota `/occurrences/image/:fileId`.
 
 ---
 
