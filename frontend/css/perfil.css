@@ -1,24 +1,21 @@
-/* Estilização geral */
 body {
-    background-color: #f8f9fa; /* Cor de fundo clara */
+    background-color: #f8f9fa;
     font-family: 'Arial', sans-serif;
 }
 
-/* Títulos */
 h1 {
-    color: #007bff; /* Azul do Bootstrap */
+    color: #007bff;
 }
 
 h3 {
     margin-top: 2rem;
-    color: #f1f1f1; /* Cor do texto claro */
+    color: #f1f1f1;
 }
 
 h5 {
-    color: #495057; /* Cor do texto secundário */
+    color: #495057;
 }
 
-/* Seção de Informações Pessoais */
 #userInfo {
     padding: 15px;
     border: 1px solid #dee2e6;
@@ -27,7 +24,6 @@ h5 {
     margin-bottom: 20px;
 }
 
-/* Listas de Serviços e Avaliações */
 #contratadosList, #avaliacoesList {
     padding: 10px;
     border: 1px solid #dee2e6;
@@ -36,7 +32,7 @@ h5 {
     margin-bottom: 20px;
 }
 
-/* Botões */
+
 .btn {
     margin-top: 10px;
 }
@@ -58,7 +54,6 @@ h5 {
     background-color: #5a6268;
 }
 
-/* Modal */
 .modal-header {
     background-color: #007bff;
     color: white;

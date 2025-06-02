@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "7f04a30c-292e-42f7-8808-f4d99503e25b",
+		"name": "Unifor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39509692"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3001/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"teste@teste.com\",\r\n    \"password\": \"senha123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Perfil Teste\",\r\n    \"email\": \"teste@teste.com\",\r\n    \"password\": \"senha123\",\r\n    \"phone\": \"11999998888\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODNkMWVkYTNjZGI2MTI3NTA1NjIxNzMiLCJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSIsIm5hbWUiOiJQZXJmaWwgVGVzdGUiLCJpYXQiOjE3NDg4MzYyMDIsImV4cCI6MTc0ODkyMjYwMn0.d96CsvYv71zAE2t_kl4ZN1DgJqGOLuoaFKSCOwOrPgs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "titulo",
+							"value": "Vazamento de Água Urgente",
+							"description": "Text",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Vazamento",
+							"description": "Text",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "Grande vazamento na calçada, desperdiçando muita água.",
+							"description": "Text",
+							"type": "text"
+						},
+						{
+							"key": "cep",
+							"value": "50000-005",
+							"description": "Text",
+							"type": "text"
+						},
+						{
+							"key": "rua",
+							"value": "Rua das Águas",
+							"description": "Text",
+							"type": "text"
+						},
+						{
+							"key": "bairro",
+							"value": "Bairro Seco",
+							"description": "Text",
+							"type": "text"
+						},
+						{
+							"key": "cidade",
+							"value": "Fortaleza",
+							"description": "Text",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "CE",
+							"description": "Text",
+							"type": "text"
+						},
+						{
+							"key": "referencia",
+							"value": "Em frente ao hidrômetro principal",
+							"description": "Text",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"description": "File",
+							"type": "file",
+							"src": "/C:/Users/Plinio/Desktop/Evidencias/vazemento-agua.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3002/occurrences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/occurrences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences?status=Aberto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/occurrences?status=Aberto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Aberto"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences?tipo=Buraco",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/occurrences?tipo=Buraco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences"
+					],
+					"query": [
+						{
+							"key": "tipo",
+							"value": "Buraco"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences?status=Aberto&tipo=Iluminação Pública",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/occurrences?status=Aberto&tipo=Iluminação Pública",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Aberto"
+						},
+						{
+							"key": "tipo",
+							"value": "Iluminação Pública"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences?status=Inexistente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/occurrences?status=Inexistente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Inexistente"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences/my",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODNkMWVkYTNjZGI2MTI3NTA1NjIxNzMiLCJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSIsIm5hbWUiOiJQZXJmaWwgVGVzdGUiLCJpYXQiOjE3NDg4MzYyMDIsImV4cCI6MTc0ODkyMjYwMn0.d96CsvYv71zAE2t_kl4ZN1DgJqGOLuoaFKSCOwOrPgs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3002/occurrences/my",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences",
+						"my"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences/683d31197a2364ce6477249a",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/occurrences/683d31197a2364ce6477249a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences",
+						"683d31197a2364ce6477249a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences/683d31197a2364ce6477249a",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODNkMWVkYTNjZGI2MTI3NTA1NjIxNzMiLCJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSIsIm5hbWUiOiJQZXJmaWwgVGVzdGUiLCJpYXQiOjE3NDg4MzYyMDIsImV4cCI6MTc0ODkyMjYwMn0.d96CsvYv71zAE2t_kl4ZN1DgJqGOLuoaFKSCOwOrPgs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "Em andamento",
+							"description": "Text",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3002/occurrences/683d31197a2364ce6477249a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences",
+						"683d31197a2364ce6477249a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/occurrences/683d31197a2364ce6477249a",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODNkMWVkYTNjZGI2MTI3NTA1NjIxNzMiLCJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSIsIm5hbWUiOiJQZXJmaWwgVGVzdGUiLCJpYXQiOjE3NDg4MzYyMDIsImV4cCI6MTc0ODkyMjYwMn0.d96CsvYv71zAE2t_kl4ZN1DgJqGOLuoaFKSCOwOrPgs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3002/occurrences/683d31197a2364ce6477249a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"occurrences",
+						"683d31197a2364ce6477249a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/auth/profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODNkMWVkYTNjZGI2MTI3NTA1NjIxNzMiLCJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSIsIm5hbWUiOiJQZXJmaWwgVGVzdGUiLCJpYXQiOjE3NDg4MzYyMDIsImV4cCI6MTc0ODkyMjYwMn0.d96CsvYv71zAE2t_kl4ZN1DgJqGOLuoaFKSCOwOrPgs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Perfil de Teste\",\r\n    \"phone\": \"11888887777\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

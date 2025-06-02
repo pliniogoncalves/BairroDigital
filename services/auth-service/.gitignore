@@ -1,0 +1,5 @@
+# auth-service/.gitignore
+node_modules
+.env
+npm-debug.log
+package-lock.json

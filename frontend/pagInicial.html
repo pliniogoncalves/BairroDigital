@@ -12,8 +12,7 @@
 </head>
 <body>
 
-   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" role="navigation" aria-label="Barra de navegação principal">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" role="navigation" aria-label="Barra de navegação principal">
     <div class="container">
       <a class="navbar-brand" href="pagInicial.html">
         <i class="fas fa-map-marked-alt text-primary"></i> <strong>Bairro Digital</strong>
@@ -24,20 +23,28 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mr-2">
-            <a href="perfil.html" id="btnNavbarPublicar" class="btn btn-success d-none" role="button" aria-label="Publicar nova ocorrência">
-              <i class="fas fa-plus-circle"></i> Publicar
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item mr-2 d-none" id="navUserInfo">
+            <span class="navbar-text" id="loggedInUserName"></span>
+          </li>
+          <li class="nav-item mr-2 d-none" id="navPerfil">
+            <a href="perfil.html" class="btn btn-info btn-sm" role="button" aria-label="Meu Perfil">
+              <i class="fas fa-user"></i> Perfil
             </a>
           </li>
           <li class="nav-item mr-2">
-            <a href="#" id="btnLogout" class="btn btn-danger d-none" role="button" aria-label="Sair">
+            <a href="nova-ocorrencia.html" id="btnNavbarPublicar" class="btn btn-success btn-sm d-none" role="button" aria-label="Publicar nova ocorrência">
+              <i class="fas fa-plus-circle"></i> Nova Ocorrência
+            </a>
+          </li>
+          <li class="nav-item mr-2">
+            <a href="#" id="btnLogout" class="btn btn-danger btn-sm d-none" role="button" aria-label="Sair">
               <i class="fas fa-sign-out-alt"></i> Sair
             </a>
           </li>
           <li class="nav-item">
-            <a href="login.html" id="btnCadastro" class="btn btn-outline-primary" aria-label="Entrar ou Cadastrar">
-              <i class="fas fa-sign-in-alt"></i> Cadastre-se
+            <a href="login.html" id="btnEntrar" class="btn btn-outline-primary btn-sm" aria-label="Entrar">
+              <i class="fas fa-sign-in-alt"></i> Entrar
             </a>
           </li>
         </ul>
@@ -49,10 +56,9 @@
     
     <header class="text-center mb-4">
       <h2 class="system-text">BAIRRO DIGITAL</h2>
-      <p class="lead">Cidadania em ação visualize problemas reportados por moradores em sua região</p>
+      <p class="lead">Cidadania em ação: visualize problemas reportados por moradores em sua região.</p>
     </header>
 
-    <!-- Filtros -->
     <section class="row mb-4" aria-label="Filtros de ocorrência">
       <div class="col-md-6 mb-3">
         <label for="filterCategory">Filtrar por status:</label>
@@ -76,11 +82,10 @@
       </div>
     </section>
 
-    <!-- Lista de Ocorrências via JS-->
-    <section id="serviceList" class="row" role="region" aria-label="Lista de ocorrências" aria-live="polite">
-    </section>
-
     <div id="error-message" class="alert alert-danger d-none mt-4" role="alert" aria-live="assertive"></div>
+
+    <section id="serviceList" class="row" role="region" aria-label="Lista de ocorrências" aria-live="polite">
+      </section>
   </main>
 
   <footer class="text-center py-4 bg-light">
@@ -89,7 +94,7 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/parse/dist/parse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="js/pagInicial.js"></script>
 </body>
 </html>

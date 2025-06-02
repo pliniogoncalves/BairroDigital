@@ -5,18 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login e Cadastro</title>
-
-  
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-   
     <link href="css/login.css" rel="stylesheet">
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.4.2/parse.min.js" defer></script>
-    
-    <script src="js/login.js" defer></script>
-
     <style>
         body {
             padding-top: 70px;
@@ -29,7 +20,6 @@
 </head>
 <body>
 
-    <!-- Vídeo de fundo -->
 <div class="bg-video-container">
   <video autoplay muted loop playsinline class="bg-video">
     <source src="video/cidade.mp4" type="video/mp4">
@@ -38,25 +28,12 @@
   </video>
   <div class="overlay"></div>
 </div>
-  
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="pagInicial.html">
-            <i class="fas fa-map-marked-alt text-primary"></i> <strong>Bairro Digital</strong>
-        </a>
-        <div class="ml-auto">
-            <a href="pagInicial.html" class="btn btn-outline-secondary">
-                &#8592; Voltar à Página Inicial
-            </a>
-        </div>
-    </nav>
-    
     <div class="container-sm">
         <img src="img/BairroDig.png" alt="Logo do BAIRRO DIGITAL" class="system-img">
 
         <div id="formContainer">
-            <!-- Login -->
+            
             <div id="loginSection">
                 <h3>Login</h3>
                 <form id="loginForm">
@@ -78,7 +55,6 @@
                 </form>
             </div>
 
-            <!-- Cadastro -->
             <div id="registerSection" style="display: none;">
                 <h3>Cadastro</h3>
                 <form id="registerForm">
@@ -107,7 +83,6 @@
         </div>
     </div>
 
-    <!-- Recuperar senha -->
     <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -135,5 +110,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/login.js" defer></script>
 </body>
 </html>
